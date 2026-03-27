@@ -72,4 +72,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Workstream Tab Switching Logic
+    const tabContainer = document.getElementById('workstreams');
+    if (tabContainer) {
+        const tabBtns = tabContainer.querySelectorAll('.tab-btn');
+        const tabPanes = tabContainer.querySelectorAll('.tab-pane');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const targetId = btn.getAttribute('data-tab');
+                const targetPane = document.getElementById(targetId);
+
+                if (!targetPane) {
+                    console.warn(`Tab pane with id "${targetId}" not found.`);
+                    return;
+                }
+
+                // Remove active classes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+
+                // Add active classes
+                btn.classList.add('active');
+                targetPane.classList.add('active');
+            });
+        });
+    }
 });

@@ -254,6 +254,42 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; c
     .section-spacing { padding: 5rem 0; }
 }
 
+/* Status Badges */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.badge-done { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); }
+.badge-progress { background: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.2); }
+.badge-tool { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.2); }
+.badge-planned { background: rgba(100, 116, 139, 0.1); color: #64748b; border: 1px solid rgba(100, 116, 139, 0.2); }
+
+/* Tutorial Comparison Preview */
+.comparison-preview {
+  width: 100%;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #dbe3f0;
+  background: #f8fafc;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 /* Premium Segmented Pill Tabs */
 .tab-nav {
     display: flex;
@@ -297,4 +333,237 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; c
 .mb-0 { margin-bottom: 0 !important; }
 .h-100 { height: 100%; }
 .items-start { align-items: flex-start; }
+
+/* ===================================================
+   SECTION 1 — DEEP DIVE: EARLY BUSINESS SIGNALS
+   Accordion / details fix
+   =================================================== */
+#signals .section-desc.text-white-muted {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+details.accordion {
+    /* Reset browser default appearance */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    min-height: 72px; /* prevents collapsed items from shrinking to pills */
+}
+
+details.accordion:hover {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+details.accordion[open] {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+details.accordion > summary {
+    /* Remove native browser triangle/marker */
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 1.75rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    user-select: none;
+    min-height: 72px;
+    line-height: 1.4;
+}
+
+details.accordion > summary::-webkit-details-marker,
+details.accordion > summary::marker {
+    display: none;
+    content: '';
+}
+
+/* Custom chevron icon */
+details.accordion > summary::after {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='rgba(255,255,255,0.7)'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+details.accordion[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+details.accordion .acc-content {
+    padding: 0 1.75rem 1.5rem 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+details.accordion .acc-content p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+details.accordion .acc-content .proof-actions {
+    margin-top: 1rem;
+}
+
+/* The grid containing the accordions */
+#signals .grid-2.gap-xl.mb-xl {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Assisted-commerce note if any */
+#signals .text-white-muted {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===================================================
+   SECTION 2 — RESOURCE VAULT
+   Card grid fix
+   =================================================== */
+.vault-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+    .vault-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .vault-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .vault-grid { grid-template-columns: 1fr; }
+}
+
+.vault-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+}
+
+.vault-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 92, 230, 0.1);
+    border-color: rgba(0, 92, 230, 0.2);
+}
+
+.vault-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--brand-blue-light);
+    border-radius: 12px;
+    font-size: 1.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.vault-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.vault-info h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.vault-info p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* ===================================================
+   SECTION 3 — FINAL CLOSING CTA
+   Contrast + spacing fix
+   =================================================== */
+.bg-brand .section-title.text-white {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.bg-brand .section-desc.text-white {
+    /* Replace inherited opacity with an explicit high-contrast color */
+    color: rgba(255, 255, 255, 0.92) !important;
+    opacity: 1 !important;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    max-width: 600px;
+}
+
+.bg-brand .cta-group {
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+.bg-brand .py-xl {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.btn-white {
+    background: #fff;
+    color: var(--brand-blue);
+    font-weight: 700;
+}
+
+.btn-white:hover {
+    background: #f0f4ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline-white {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    background: transparent;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
 
