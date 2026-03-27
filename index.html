@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cytron Tutorial Ownership Review & Evidence Portal</title>
+<meta name="description" content="Internal management review for Cytron Tutorials: Q1 ownership recap, evidence, and Q2 plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.proof-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:auto}
+.image-thumb{width:100%;height:100%;object-fit:cover;display:block}
+.image-caption{font-size:.85rem;color:var(--text-muted);margin-top:.75rem}
+.evidence-mini{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.evidence-mini a{text-decoration:none;color:inherit}
+.small-note{font-size:.9rem;color:var(--text-muted)}
+.link-list{list-style:none;padding-left:0;display:flex;flex-direction:column;gap:.7rem}
+.link-list a{color:var(--brand-blue);text-decoration:none;font-weight:600}
+.link-list a:hover{text-decoration:underline}
+.split-view{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+@media (max-width:900px){.split-view{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo"><span class="logo-text">Cytron</span> Evidence Portal</div>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#objective">Objective</a></li>
+      <li><a href="#workstreams">Workstreams</a></li>
+      <li><a href="#evidence">Proof of Work</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#signals">Signals</a></li>
+      <li><a href="#q2-plan">Q2 Plan</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<section id="overview" class="hero section-spacing pt-nav">
+  <div class="hero-bg-accent"></div>
+  <div class="container hero-container animate-fade-up">
+    <div class="hero-content">
+      <div class="badge fade-in">Internal Management Review</div>
+      <h1 class="hero-title fw-bold">Taking Ownership of <span class="text-blue">Cytron Tutorials</span></h1>
+      <p class="hero-subtitle">This site brings together my Q1 work, the supporting proof, and the Q2 plan in one place. The bigger goal is to move Cytron Tutorials from maintenance work into a more structured, scalable, and measurable business-support channel.</p>
+      <ul class="hero-points mb-xl">
+        <li><svg class="icon check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>Built a clearer WI-aligned tutorial structure for new and legacy content</li>
+        <li><svg class="icon check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>Restructured Q1 priority categories: Industrial, Motor Driver, Raspberry Pi, Robotics, micro:bit, and Arduino</li>
+        <li><svg class="icon check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>Took over tutorial-related operations, contributor flow, and Telegram automation support</li>
+        <li><svg class="icon check" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"/></svg>Started collecting early search, add-to-cart, and order-related business signals</li>
+      </ul>
+      <div class="cta-group">
+        <a href="#evidence" class="btn btn-primary">Review Evidence</a>
+        <a href="#q2-plan" class="btn btn-secondary">See Q2 Plan</a>
+      </div>
+      <p class="small-note" style="margin-top:1rem; max-width:40rem;">Best way to present this page: start with the overview, then the workstreams, then the proof section, and end with the Q2 plan.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-abstract-grid">
+        <div class="abstract-card slide-up delay-1">
+          <div class="abstract-bar" style="width: 55%"><div class="abstract-fill"></div></div>
+          <div class="abstract-bar" style="width: 82%"><div class="abstract-fill" style="background:var(--border-color);"></div></div>
+          <div class="metric-number text-blue" style="font-size:1.75rem; margin-top:1rem;">1,197</div>
+          <div class="small-note">tutorial rows tracked</div>
+        </div>
+        <div class="abstract-card slide-up delay-2" style="transform:translateY(2rem);">
+          <div class="metric-number" style="font-size:2rem;">223</div>
+          <div class="small-note">rows marked UPDATED</div>
+        </div>
+        <div class="abstract-card slide-up delay-3" style="grid-column: span 2;">
+          <div class="flex-row items-center justify-between mb-sm">
+            <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">Q1 Foundation</span>
+            <span class="text-blue fw-bold" style="font-size:0.9rem;">Ownership in progress</span>
+          </div>
+          <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="100%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="objective" class="section-spacing border-bottom-light">
+  <div class="container animate-fade-up">
+    <div class="text-center max-w-lg mx-auto mb-xl">
+      <h2 class="section-title">The Strategic Objective</h2>
+      <p class="section-desc">My Q1 objective was to take clearer ownership of the Cytron Tutorial platform so it becomes more organized, more consistent, easier to maintain, and easier to evaluate.</p>
+    </div>
+    <div class="grid-2 gap-xl">
+      <div class="card bg-light border-subtle border-radius">
+        <h3 class="fs-xl mb-md">Why tutorial ownership matters</h3>
+        <p class="text-muted fs-md mb-md">Without a clear owner, tutorial quality becomes inconsistent and harder to scale. The WI gives the baseline publishing rules, while the newer template gives writers a clearer flow for building better tutorial pages.</p>
+        <ul class="check-list mt-lg">
+          <li>Creates a repeatable publishing standard for contributors</li>
+          <li>Improves readability and consistency across legacy and new tutorials</li>
+          <li>Makes future tracking, scaling, and automation more realistic</li>
+        </ul>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="WI_Redacted_Summary.html" target="_blank">Open WI summary</a>
+          <a class="btn btn-secondary btn-sm" href="Tutorial_Template_WI_Aligned.pdf" target="_blank">Open template PDF</a>
+        </div>
+      </div>
+      <div class="card bg-light border-subtle border-radius">
+        <h3 class="fs-xl mb-md" style="color: #0f172a;">Why this supports business value</h3>
+        <p class="fs-md mb-md" style="color: #334155;">A good tutorial is more than documentation. It can help users discover products, finish setup with more confidence, reduce support friction, and create assisted-commerce signals when the right products and next steps are easier to act on.</p>
+        <ul class="check-list mt-lg">
+          <li style="color: #0f172a;">Capture problem-led search intent</li>
+          <li style="color: #0f172a;">Reduce setup friction and improve user confidence</li>
+          <li style="color: #0f172a;">Support product clicks, add-to-cart actions, and inquiry paths</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline-sec" class="section-spacing bg-light border-y">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl"><h2 class="section-title">Execution Roadmap</h2></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">Phase 1</div>
+          <h3 class="timeline-title">Q4 2025 — Planning & Strategy</h3>
+          <p class="text-muted" style="max-width:600px">Built the roadmap direction: category pathways, restructuring ideas, and a clearer view of how tutorials should progress instead of staying as isolated pages.</p>
+        </div>
+      </div>
+      <div class="timeline-item active">
+        <div class="timeline-content border-highlight">
+          <div class="timeline-date highlight-text fw-bold" style="background:var(--brand-blue); color:#fff;">Phase 2</div>
+          <h3 class="timeline-title text-dark">Q1 2026 — Building the Foundation</h3>
+          <p class="fw-bold text-dark" style="max-width:600px">Took over the day-to-day tutorial scope, pushed standardization forward, reorganized priority categories, and extended the supporting systems needed to manage the work properly.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content opacity-90">
+          <div class="timeline-date opacity-60">Phase 3</div>
+          <h3 class="timeline-title text-muted">Q2 2026 — Activation & Measurement</h3>
+          <p class="text-muted" style="max-width:600px">Use the cleaner foundation to strengthen tracking, distribution, and reporting so management can evaluate tutorial work more clearly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="workstreams" class="section-spacing">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">Detailed Q1 Workstreams</h2>
+      <p class="section-desc">Each workstream below explains what was done, why it matters, and what proof supports it.</p>
+    </div>
+    <div class="tab-nav">
+      <button class="tab-btn active" data-tab="ws-standardization">Standardization</button>
+      <button class="tab-btn" data-tab="ws-category">Category Cleanup</button>
+      <button class="tab-btn" data-tab="ws-ops">Operations Ownership</button>
+      <button class="tab-btn" data-tab="ws-tracking">Tracking & Signals</button>
+      <button class="tab-btn" data-tab="ws-tools">Tools & Automation</button>
+    </div>
+
+    <div id="ws-standardization" class="tab-pane active fade-in">
+      <div class="card border-subtle p-xl border-radius">
+        <div class="grid-2 gap-xl items-start">
+          <div class="flex-column">
+            <div class="flex-row items-center gap-md mb-lg">
+              <h3 class="fs-xl mb-0">Standardization System</h3>
+              <span class="badge-status badge-done mb-0">Foundation established</span>
+            </div>
+            <h4 class="fs-md text-dark mb-sm">What I did</h4>
+            <p class="text-muted mb-lg">I used the existing WI as the baseline, then strengthened the writer-facing structure with a clearer template. The newer format gives writers a more practical flow to follow and gives me a cleaner standard to review against.</p>
+            <h4 class="fs-md text-dark mb-sm">Why it matters</h4>
+            <p class="text-muted mb-0">This shifts tutorial work from page-by-page cleanup into a more repeatable publishing system that contributors can follow and I can review more consistently.</p>
+          </div>
+          <div class="bg-light p-lg border-subtle border-radius h-100 flex-column">
+            <h4 class="fs-md text-dark mb-md">Evidence</h4>
+            <ul class="link-list mt-0">
+              <li><a href="WI_Redacted_Summary.html" target="_blank">Redacted WI summary</a></li>
+              <li><a href="Tutorial_Template_WI_Aligned.pdf" target="_blank">WI-aligned tutorial template</a></li>
+              <li><a href="#gallery">Before / after examples</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ws-category" class="tab-pane fade-in">
+      <div class="card border-subtle p-xl border-radius">
+        <div class="grid-2 gap-xl items-start">
+          <div class="flex-column">
+            <div class="flex-row items-center gap-md mb-lg">
+              <h3 class="fs-xl mb-0">Category Restructuring</h3>
+              <span class="badge-status badge-progress mb-0">Ongoing</span>
+            </div>
+            <h4 class="fs-md text-dark mb-sm">What I did</h4>
+            <p class="text-muted mb-lg">I grouped Q1 work by priority category instead of treating tutorials as isolated edits. The focus moved across Industrial, Motor Driver, Raspberry Pi, Robotics, micro:bit, and Arduino.</p>
+            <h4 class="fs-md text-dark mb-sm">Why it matters</h4>
+            <p class="text-muted mb-0">This creates a more strategic migration path. It also makes it easier to explain progress to management and decide which categories deserve earlier tracking, distribution, or series-page attention.</p>
+          </div>
+          <div class="bg-light p-lg border-subtle border-radius h-100 flex-column">
+            <h4 class="fs-md text-dark mb-md">Evidence</h4>
+            <ul class="link-list mt-0">
+              <li><a href="Khairul_Action_Plan.xlsx" target="_blank">Q1 action plan / Gantt source</a></li>
+              <li><a href="Active_Cytron_Tutorial_25March2026.csv" target="_blank">Active tutorial tracking sheet</a></li>
+              <li><a href="#categories">Category progress dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ws-ops" class="tab-pane fade-in">
+      <div class="card border-subtle p-xl border-radius">
+        <div class="grid-2 gap-xl items-start">
+          <div class="flex-column">
+            <div class="flex-row items-center gap-md mb-lg">
+              <h3 class="fs-xl mb-0">Operations Ownership</h3>
+              <span class="badge-status badge-done mb-0">Active</span>
+            </div>
+            <h4 class="fs-md text-dark mb-sm">What I did</h4>
+            <p class="text-muted mb-lg">I took over the tutorial publishing scope, aligned new work to the WI/template direction, and continued the tutorial Telegram automation workflow that had already been started by the Education team.</p>
+            <h4 class="fs-md text-dark mb-sm">Why it matters</h4>
+            <p class="text-muted mb-0">Ownership is not only content editing. It also means keeping the operating flow alive through contributor guidance, review discipline, and distribution support.</p>
+          </div>
+          <div class="bg-light p-lg border-subtle border-radius h-100 flex-column">
+            <h4 class="fs-md text-dark mb-md">Evidence</h4>
+            <ul class="link-list mt-0">
+              <li><a href="Tutorial_Automation.csv" target="_blank">Telegram automation sheet</a></li>
+              <li><a href="#tools">Systems & tools section</a></li>
+              <li><a href="Evidence_Map.md" target="_blank">Evidence map</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ws-tracking" class="tab-pane fade-in">
+      <div class="card border-subtle p-xl border-radius">
+        <div class="grid-2 gap-xl items-start">
+          <div class="flex-column">
+            <div class="flex-row items-center gap-md mb-lg">
+              <h3 class="fs-xl mb-0">Tracking & Business Signals</h3>
+              <span class="badge-status badge-progress mb-0">Early instrumentation</span>
+            </div>
+            <h4 class="fs-md text-dark mb-sm">What I did</h4>
+            <p class="text-muted mb-lg">I started pulling together search-gap data, add-to-cart behavior, and visible order-linked signals to test whether tutorial pages can influence commercial outcomes.</p>
+            <h4 class="fs-md text-dark mb-sm">Why it matters</h4>
+            <p class="text-muted mb-0">This is the step that helps shift tutorial work from content maintenance into something management can assess as a business-support channel.</p>
+          </div>
+          <div class="bg-light p-lg border-subtle border-radius h-100 flex-column">
+            <h4 class="fs-md text-dark mb-md">Evidence</h4>
+            <ul class="link-list mt-0">
+              <li><a href="assets/Search_Report.png" target="_blank">Search report snapshot</a></li>
+              <li><a href="assets/Add_to_Cart_Report.png" target="_blank">Add-to-cart snapshot</a></li>
+              <li><a href="assets/Order_Tracking_Report.png" target="_blank">Order tracking snapshot</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="ws-tools" class="tab-pane fade-in">
+      <div class="card border-subtle p-xl border-radius">
+        <div class="grid-2 gap-xl items-start">
+          <div class="flex-column">
+            <div class="flex-row items-center gap-md mb-lg">
+              <h3 class="fs-xl mb-0">Supporting Tools & Automation</h3>
+              <span class="badge-status badge-done mb-0">Live support layer</span>
+            </div>
+            <h4 class="fs-md text-dark mb-sm">What I did</h4>
+            <p class="text-muted mb-lg">Alongside the content work, I built or extended support systems around the tutorial platform: strategy planning, industrial documentation, an AI-assisted revamp tool, and Telegram automation continuation.</p>
+            <h4 class="fs-md text-dark mb-sm">Why it matters</h4>
+            <p class="text-muted mb-0">These systems reduce manual overhead, make the work easier to scale, and help tutorial ownership rely less on ad hoc execution.</p>
+          </div>
+          <div class="bg-light p-lg border-subtle border-radius h-100 flex-column">
+            <h4 class="fs-md text-dark mb-md">Evidence</h4>
+            <ul class="link-list mt-0">
+              <li><a href="#tools">Tools grid</a></li>
+              <li><a href="https://khairultajudin13.github.io/cytron-tutorial-content-strategy/" target="_blank">Content strategy site</a></li>
+              <li><a href="https://cytron-wiki.pages.dev/docs/products/" target="_blank">Cytron Wiki</a></li>
+              <li><a href="https://cytron-tutorial-revamp-assistant.vercel.app/" target="_blank">Revamp assistant</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evidence" class="section-spacing bg-light border-y">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">Proof of Work</h2>
+      <p class="section-desc">This section gathers the main documents, datasets, screenshots, and roadmap assets behind the Q1 story.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-done mb-md">Operating standard</span>
+        <h4 class="fs-md mb-sm text-dark">WI summary</h4>
+        <p class="fs-sm text-muted mb-lg">A redacted summary of the tutorial WI for management review.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="WI_Redacted_Summary.html" target="_blank">Open summary</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-done mb-md">Writer system</span>
+        <h4 class="fs-md mb-sm text-dark">Tutorial template</h4>
+        <p class="fs-sm text-muted mb-lg">The WI-aligned template used to give contributors a clearer page structure.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="Tutorial_Template_WI_Aligned.pdf" target="_blank">Open PDF</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-progress mb-md">Master tracking</span>
+        <h4 class="fs-md mb-sm text-dark">Active tutorial sheet</h4>
+        <p class="fs-sm text-muted mb-lg">1,197 tracked rows with status fields for updated, re-edit, subtopic, and more.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="Active_Cytron_Tutorial_25March2026.csv" target="_blank">Open CSV</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-done mb-md">Execution plan</span>
+        <h4 class="fs-md mb-sm text-dark">Q1 action plan</h4>
+        <p class="fs-sm text-muted mb-lg">The planning file that anchors the Q1 scope and category-based execution flow.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="Khairul_Action_Plan.xlsx" target="_blank">Open XLSX</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-progress mb-md">Demand signal</span>
+        <h4 class="fs-md mb-sm text-dark">Search report</h4>
+        <p class="fs-sm text-muted mb-lg">Shows user search demand that did not return ideal results, revealing tutorial/content gaps.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="assets/Search_Report.png" target="_blank">Open screenshot</a>
+          <a class="btn btn-secondary btn-sm" href="assets/Search_Report_Full.png" target="_blank">Open full</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-progress mb-md">Commerce signal</span>
+        <h4 class="fs-md mb-sm text-dark">Add-to-cart report</h4>
+        <p class="fs-sm text-muted mb-lg">Shows that tutorial pages already generate “Add All Components to Cart” behavior.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="assets/Add_to_Cart_Report.png" target="_blank">Open screenshot</a>
+          <a class="btn btn-secondary btn-sm" href="assets/Add_to_Cart_Report_Full.png" target="_blank">Open full</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-progress mb-md">Order signal</span>
+        <h4 class="fs-md mb-sm text-dark">Tracked order snapshot</h4>
+        <p class="fs-sm text-muted mb-lg">Visible order-linked records totaling MYR 1,893.69 in the screenshot provided.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="assets/Order_Tracking_Report.png" target="_blank">Open screenshot</a>
+        </div>
+      </div>
+      <div class="card border-subtle evidence-card hover-lift">
+        <span class="badge-status badge-tool mb-md">Roadmap assets</span>
+        <h4 class="fs-md mb-sm text-dark">Category roadmaps</h4>
+        <p class="fs-sm text-muted mb-lg">Q4/Q1 pathway thinking that can now support series pages, category hubs, and Q2 planning.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="Raspberry_Pi_Mastery_Roadmap.pptx" target="_blank">Raspberry Pi</a>
+          <a class="btn btn-secondary btn-sm" href="Arduino_Learning_Pathway.pptx" target="_blank">Arduino</a>
+          <a class="btn btn-secondary btn-sm" href="Industrial_Mastery_Path.pptx" target="_blank">Industrial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section-spacing">
+  <div class="container animate-fade-up">
+    <div class="text-center max-w-lg mx-auto mb-xl">
+      <h2 class="section-title">Tutorial Improvement Gallery</h2>
+      <p class="section-desc">This is the clearest way to show the difference between legacy article-style pages and the more structured direction I want going forward.</p>
+    </div>
+    <div class="split-view gap-xl">
+      <div class="split-side border-subtle border-radius p-lg bg-light flex-column">
+        <span class="badge-status badge-outline mb-md">Legacy example</span>
+        <div class="image-placeholder" style="height:220px;">
+          <div class="flex-column items-center">
+            <span class="fs-xs" style="text-transform:uppercase; letter-spacing:0.05em;">Before example</span>
+            <span class="fs-md fw-bold text-dark mt-sm">Build Mobile Robot Part 1</span>
+          </div>
+        </div>
+        <h4 class="fs-lg text-dark mb-sm">Older page behavior</h4>
+        <p class="text-muted fs-sm mb-md">This page is still useful historically, but it behaves more like a long article. The structure is harder to scan, the hardware path is less clear, and the next-step flow is weaker.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="https://my.cytron.io/tutorial/build-mobile-robot-part-1" target="_blank">Open live page</a>
+        </div>
+      </div>
+
+      <div class="split-side border-subtle border-radius p-lg bg-white flex-column shadow-soft">
+        <span class="badge-status badge-done mb-md text-white" style="background:var(--brand-blue)">Improved example</span>
+        <div class="image-placeholder" style="height:220px; border-color:rgba(0, 92, 230, 0.3); background: rgba(0,92,230,0.03); color:var(--brand-blue);">
+          <div class="flex-column items-center">
+            <span class="fs-xs" style="text-transform:uppercase; letter-spacing:0.05em;">After example</span>
+            <span class="fs-md fw-bold text-blue mt-sm">Controlling SmartDrive40 Using 3.3V Microcontroller</span>
+          </div>
+        </div>
+        <h4 class="fs-lg text-dark mb-sm">Clearer tutorial flow</h4>
+        <p class="text-muted fs-sm mb-md">This type of page is closer to the direction I want: clearerer sectioning, easier scanning, stronger parts visibility, and better support for testing, troubleshooting, and next steps.</p>
+        <div class="proof-actions">
+          <a class="btn btn-secondary btn-sm" href="https://my.cytron.io/tutorial/controlling-smartdrive40-using-3-3v-microcontroller" target="_blank">Open live page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border-subtle p-lg border-radius mt-lg">
+      <h4 class="fs-lg mb-sm">Series / hub direction</h4>
+      <p class="text-muted">I also started testing the idea of grouping old tutorials into a clearer series experience instead of only keeping single isolated pages.</p>
+      <div class="proof-actions">
+        <a class="btn btn-secondary btn-sm" href="https://my.cytron.io/tutorial/Getting_Started_with_Raspberry_Pi_and_Blynk" target="_blank">Open Raspberry Pi + Blynk series</a>
+        <a class="btn btn-secondary btn-sm" href="https://my.cytron.io/tutorial/getting-started-with-edgebox-rpi-200" target="_blank">Open EdgeBox reference page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="section-spacing bg-light border-y">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">Category Progress Dashboard</h2>
+      <p class="section-desc">Q1 work was organized by category so the platform becomes easier to manage and easier to explain to management.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">Industrial</h4><span class="badge-status badge-progress mb-0">High priority</span></div>
+        <p class="fs-sm text-muted mb-lg">Commercially important but more technically complex. The roadmap work and industrial documentation already give this category a stronger foundation.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="45%"></div></div>
+      </div>
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">Motor Driver</h4><span class="badge-status badge-done mb-0">Most stable</span></div>
+        <p class="fs-sm text-muted mb-lg">One of the strongest examples of standardization work because the hardware link flow and tutorial format can be made very clear.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="80%"></div></div>
+      </div>
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">Raspberry Pi</h4><span class="badge-status badge-progress mb-0">Auditing</span></div>
+        <p class="fs-sm text-muted mb-lg">A large and important category with strong potential for series pages and better discovery around hardware + software use cases.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="30%"></div></div>
+      </div>
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">Robotics</h4><span class="badge-status badge-progress mb-0">In progress</span></div>
+        <p class="fs-sm text-muted mb-lg">Legacy robotics content often spans multi-part flows, so part of the work is deciding what should become modular tutorials and what should become better series pages.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="50%"></div></div>
+      </div>
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">micro:bit</h4><span class="badge-status badge-done mb-0">Advanced</span></div>
+        <p class="fs-sm text-muted mb-lg">Education-heavy category where cleaner beginner-friendly structure matters a lot.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="85%"></div></div>
+      </div>
+      <div class="card border-subtle hover-lift">
+        <div class="flex-row justify-between items-center mb-md"><h4 class="fs-lg">Arduino</h4><span class="badge-status badge-planned mb-0">Next wave</span></div>
+        <p class="fs-sm text-muted mb-lg">Very large legacy pool. A good candidate for roadmap-led cleanup and better progression design.</p>
+        <div class="progress-strip"><div class="progress-fill js-progress" style="width:0%" data-width="15%"></div></div>
+      </div>
+    </div>
+    <div class="evidence-mini">
+      <a class="card border-subtle hover-lift" href="assets/Industrial_Roadmap_Montage.png" target="_blank"><h4 class="fs-md mb-sm">Industrial roadmap montage</h4><p class="fs-sm text-muted">Visual planning support for industrial tutorial direction.</p></a>
+      <a class="card border-subtle hover-lift" href="assets/Raspberry_Pi_Roadmap_Montage.png" target="_blank"><h4 class="fs-md mb-sm">Raspberry Pi roadmap montage</h4><p class="fs-sm text-muted">Pathway thinking that can support future series pages.</p></a>
+      <a class="card border-subtle hover-lift" href="assets/Arduino_Roadmap_Montage.png" target="_blank"><h4 class="fs-md mb-sm">Arduino roadmap montage</h4><p class="fs-sm text-muted">Useful for long-term cleanup and progression planning.</p></a>
+      <a class="card border-subtle hover-lift" href="Evidence_Map.md" target="_blank"><h4 class="fs-md mb-sm">Evidence map</h4><p class="fs-sm text-muted">Section-by-section mapping of what file supports what claim.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="section-spacing">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">Systems & Tools Supporting Ownership</h2>
+      <p class="section-desc">These are not side projects. Together, they support strategy, knowledge structure, execution speed, and distribution support.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card minimal-card hover-lift flex-column">
+        <span class="badge-status badge-tool mb-md" style="width:fit-content;">Built from scratch</span>
+        <h3 class="fs-xl text-dark mb-sm">Content Strategy Site</h3>
+        <p class="fs-md text-muted mb-md">A place to track backlog direction, renovation phases, and tutorial strategy ideas.</p>
+        <p class="fs-sm text-dark mt-auto"><strong>Use in management review:</strong> Show that tutorial work already has a strategic architecture, not only task-by-task execution.</p>
+        <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="https://khairultajudin13.github.io/cytron-tutorial-content-strategy/" target="_blank">Open site</a></div>
+      </div>
+      <div class="card minimal-card hover-lift flex-column">
+        <span class="badge-status badge-tool mb-md" style="width:fit-content;">New integration</span>
+        <h3 class="fs-xl text-dark mb-sm">Cytron Wiki</h3>
+        <p class="fs-md text-muted mb-md">Supports industrial product knowledge and gives the tutorial ecosystem a stronger documentation layer.</p>
+        <p class="fs-sm text-dark mt-auto"><strong>Use in management review:</strong> Show that tutorial ownership also touches broader product knowledge infrastructure.</p>
+        <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="https://cytron-wiki.pages.dev/docs/products/" target="_blank">Open wiki</a></div>
+      </div>
+      <div class="card minimal-card hover-lift flex-column">
+        <span class="badge-status badge-tool mb-md" style="width:fit-content;">Custom application</span>
+        <h3 class="fs-xl text-dark mb-sm">Tutorial Revamp Assistant</h3>
+        <p class="fs-md text-muted mb-md">An AI-assisted workflow meant to help restructure legacy tutorial content faster while staying aligned to the WI/template direction.</p>
+        <p class="fs-sm text-dark mt-auto"><strong>Use in management review:</strong> Show that I am also trying to scale the work, not just doing manual cleanup forever.</p>
+        <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="https://cytron-tutorial-revamp-assistant.vercel.app/" target="_blank">Open assistant</a></div>
+      </div>
+      <div class="card minimal-card hover-lift flex-column">
+        <span class="badge-status badge-progress mb-md" style="width:fit-content;">Taken over & extended</span>
+        <h3 class="fs-xl text-dark mb-sm">Telegram Automation</h3>
+        <p class="fs-md text-muted mb-md">The workflow already existed earlier, but I continued the ownership in Q1 by adding groups and maintaining the system for tutorial-related distribution support.</p>
+        <p class="fs-sm text-dark mt-auto"><strong>Current file evidence:</strong> 23 groups/channels tracked, 171 rows with Execute = On, 126 rows marked Sent.</p>
+        <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="Tutorial_Automation.csv" target="_blank">Open automation CSV</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="signals" class="section-spacing bg-dark">
+  <div class="container animate-fade-up">
+    <div class="text-center max-w-lg mx-auto mb-xl">
+      <h2 class="section-title text-white">Deep Dive: Early Business Signals</h2>
+      <p class="section-desc text-white-muted" style="font-size:1.1rem;">These are early assisted-commerce signals, not full direct revenue attribution. The value appears to be real, but the tracking layer is still incomplete.</p>
+    </div>
+
+    <div class="grid-2 gap-xl mb-xl">
+      <details class="accordion flex-column border-radius" open style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <summary style="color:#fff;">1. Search demand exists</summary>
+        <div class="acc-content" style="border-top-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75);">
+          <p>The search report shows users searching for things like XBee, Jetson Nano alternatives, LM35DZ alternatives, Maker UNO, and specific Raspberry Pi / OpenCV topics. This suggests real demand that tutorial coverage can respond to.</p>
+          <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="assets/Search_Report.png" target="_blank">Open screenshot</a></div>
+        </div>
+      </details>
+
+      <details class="accordion flex-column border-radius" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <summary style="color:#fff;">2. Add-to-cart signals already exist</summary>
+        <div class="acc-content" style="border-top-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75);">
+          <p>The add-to-cart screenshot shows tutorial pages already generating “Add All Components to Cart” behavior. This suggests a good tutorial can influence buying confidence during evaluation.</p>
+          <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="assets/Add_to_Cart_Report.png" target="_blank">Open screenshot</a></div>
+        </div>
+      </details>
+
+      <details class="accordion flex-column border-radius" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <summary style="color:#fff;">3. Some tracked order evidence is visible</summary>
+        <div class="acc-content" style="border-top-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75);">
+          <p>The order screenshot shows 3 visible tracked records totaling MYR 1,893.69. This is not enough to claim full revenue attribution yet, but it is enough to show that tutorial-assisted commerce is plausible and worth measuring properly.</p>
+          <div class="proof-actions"><a class="btn btn-secondary btn-sm" href="assets/Order_Tracking_Report.png" target="_blank">Open screenshot</a></div>
+        </div>
+      </details>
+
+      <details class="accordion flex-column border-radius" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <summary style="color:#ef4444;">4. The current gap is measurement consistency</summary>
+        <div class="acc-content" style="border-top-color:rgba(255,255,255,0.1); color:rgba(255,255,255,0.75);">
+          <p>The main limitation is not whether value exists. It is whether the platform can consistently connect tutorial interactions back to later inquiry, cart, and order behavior across the full user journey.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="metric-placeholders">
+      <div class="placeholder-card flex-column text-center">
+        <div class="placeholder-value counter" data-target="1197">0</div>
+        <div class="placeholder-label">Tutorial rows tracked</div>
+      </div>
+      <div class="placeholder-card flex-column text-center">
+        <div class="placeholder-value counter" data-target="223">0</div>
+        <div class="placeholder-label">Rows marked UPDATED</div>
+      </div>
+      <div class="placeholder-card flex-column text-center">
+        <div class="placeholder-value counter" data-target="626">0</div>
+        <div class="placeholder-label">Rows still RE-EDIT</div>
+      </div>
+      <div class="placeholder-card flex-column text-center">
+        <div class="placeholder-value counter" data-target="3">0</div>
+        <div class="placeholder-label">Visible tracked orders</div>
+      </div>
+      <div class="placeholder-card border-right-none flex-column text-center">
+        <div class="placeholder-value counter" data-target="6">0</div>
+        <div class="placeholder-label">Priority categories</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenges" class="section-spacing bg-light border-y">
+  <div class="container animate-fade-up">
+    <div class="flex-row items-center gap-xl justify-between">
+      <div class="flex-1 max-w-lg">
+        <h2 class="section-title">Q1 Challenges</h2>
+        <p class="section-desc mt-0 mb-0" style="font-size:1.15rem;color:var(--text-dark);">Q1 was a foundation quarter. The challenge was not lack of direction, but the size of the legacy backlog and the limits of the current platform.</p>
+      </div>
+      <div class="flex-1 w-100 mt-md-mobile">
+        <div class="card bg-white border-subtle border-radius p-lg">
+          <ul class="challenge-checklist">
+            <li>Large volume of legacy tutorials still needing re-edit or restructuring.</li>
+            <li>Many old posts do not yet have full content completion, product links, banners, or tracking.</li>
+            <li>Tracking is still too partial to measure long user journeys confidently.</li>
+            <li>Distribution support exists, but rollout is still incomplete.</li>
+            <li>Some categories are more complex because they involve heavier technical validation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="q2-plan" class="section-spacing">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">My Focus for Q2: Activation & Measurement</h2>
+      <p class="section-desc mb-xl" style="font-size:1.25rem;color:var(--text-dark);">Q1 built the foundation. Q2 should make the value more visible.</p>
+    </div>
+    <div class="grid-2 gap-xl q2-pillars">
+      <div class="pillar-box border-left-blue hover-lift shadow-soft">
+        <div class="pillar-number">01</div>
+        <h3 class="text-dark fs-xl mb-sm" style="position:relative; z-index:2;">Finish priority migrations</h3>
+        <p class="text-muted text-md mt-auto" style="position:relative; z-index:2;">Continue upgrading the most important categories and legacy pages first instead of spreading effort too thin.</p>
+      </div>
+      <div class="pillar-box border-left-blue hover-lift shadow-soft">
+        <div class="pillar-number">02</div>
+        <h3 class="text-dark fs-xl mb-sm" style="position:relative; z-index:2;">Strengthen tracking & CTA flow</h3>
+        <p class="text-muted text-md mt-auto" style="position:relative; z-index:2;">Improve product links, CTA flow, and attribution setup so tutorial value becomes easier to measure.</p>
+      </div>
+      <div class="pillar-box border-left-blue hover-lift shadow-soft">
+        <div class="pillar-number">03</div>
+        <h3 class="text-dark fs-xl mb-sm" style="position:relative; z-index:2;">Expand distribution</h3>
+        <p class="text-muted text-md mt-auto" style="position:relative; z-index:2;">Turn automation and channel support into a more repeatable distribution layer for tutorials.</p>
+      </div>
+      <div class="pillar-box border-left-blue hover-lift shadow-soft">
+        <div class="pillar-number">04</div>
+        <h3 class="text-dark fs-xl mb-sm" style="position:relative; z-index:2;">Report impact monthly</h3>
+        <p class="text-muted text-md mt-auto" style="position:relative; z-index:2;">Start giving management a simpler monthly readout of progress, engagement, search demand, and assisted-commerce signals.</p>
+      </div>
+    </div>
+    <div class="roadmap-band border-subtle border-radius bg-white shadow-soft flex-row items-center" style="margin-top:4rem;">
+      <div class="roadmap-step flex-1 px-lg border-right-light">
+        <div class="roadmap-month fs-sm">April</div>
+        <div class="roadmap-desc fs-md text-dark fw-bold">Finish priority pages and tighten tracking setup</div>
+      </div>
+      <div class="roadmap-step flex-1 px-lg border-right-light">
+        <div class="roadmap-month fs-sm">May</div>
+        <div class="roadmap-desc fs-md text-dark fw-bold">Test distribution flow and category / series visibility</div>
+      </div>
+      <div class="roadmap-step flex-1 px-lg">
+        <div class="roadmap-month fs-sm">June</div>
+        <div class="roadmap-desc fs-md text-dark fw-bold">Prepare the first clearer impact report for management</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vault" class="section-spacing bg-light border-y">
+  <div class="container animate-fade-up">
+    <div class="text-center mb-xl">
+      <h2 class="section-title">Resource Vault</h2>
+      <p class="section-desc">Everything below is here so the website can also function as a one-stop review portal for management.</p>
+    </div>
+    <div class="vault-grid">
+      <a href="WI_Redacted_Summary.html" class="vault-item" target="_blank"><div class="vault-icon">📄</div><div class="vault-info"><h4>WI redacted summary</h4><p>Management-safe standard overview</p></div></a>
+      <a href="Tutorial_Template_WI_Aligned.pdf" class="vault-item" target="_blank"><div class="vault-icon">🧩</div><div class="vault-info"><h4>Tutorial template</h4><p>Writer-facing structure</p></div></a>
+      <a href="Active_Cytron_Tutorial_25March2026.csv" class="vault-item" target="_blank"><div class="vault-icon">📊</div><div class="vault-info"><h4>Active tutorial CSV</h4><p>Main tracking sheet</p></div></a>
+      <a href="Khairul_Action_Plan.xlsx" class="vault-item" target="_blank"><div class="vault-icon">🗂️</div><div class="vault-info"><h4>Action plan</h4><p>Q1 plan and Gantt source</p></div></a>
+      <a href="Tutorial_Automation.csv" class="vault-item" target="_blank"><div class="vault-icon">🤖</div><div class="vault-info"><h4>Tutorial automation CSV</h4><p>Telegram workflow evidence</p></div></a>
+      <a href="Raspberry_Pi_Mastery_Roadmap.pptx" class="vault-item" target="_blank"><div class="vault-icon">🖥️</div><div class="vault-info"><h4>Raspberry Pi roadmap</h4><p>Pathway / roadmap deck</p></div></a>
+      <a href="Arduino_Learning_Pathway.pptx" class="vault-item" target="_blank"><div class="vault-icon">🔌</div><div class="vault-info"><h4>Arduino roadmap</h4><p>Pathway / roadmap deck</p></div></a>
+      <a href="Industrial_Mastery_Path.pptx" class="vault-item" target="_blank"><div class="vault-icon">🏭</div><div class="vault-info"><h4>Industrial roadmap</h4><p>Pathway / roadmap deck</p></div></a>
+      <a href="assets/Search_Report.png" class="vault-item" target="_blank"><div class="vault-icon">🔎</div><div class="vault-info"><h4>Search report</h4><p>Demand gap screenshot</p></div></a>
+      <a href="assets/Add_to_Cart_Report.png" class="vault-item" target="_blank"><div class="vault-icon">🛒</div><div class="vault-info"><h4>Add-to-cart report</h4><p>Tutorial commerce signal</p></div></a>
+      <a href="assets/Order_Tracking_Report.png" class="vault-item" target="_blank"><div class="vault-icon">💰</div><div class="vault-info"><h4>Order tracking report</h4><p>Visible order-linked signal</p></div></a>
+      <a href="Evidence_Map.md" class="vault-item" target="_blank"><div class="vault-icon">🧭</div><div class="vault-info"><h4>Evidence map</h4><p>Section-by-section content guide</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-spacing bg-brand overflow-hidden relative text-center">
+  <div class="container animate-fade-up py-xl">
+    <h2 class="section-title text-white mb-md" style="font-size:2.75rem; max-width:900px; margin-left:auto; margin-right:auto;">Turning Tutorial Work into a Clearer Business Support Story</h2>
+    <p class="section-desc text-white opacity-90 mx-auto" style="max-width: 800px; font-size:1.15rem; line-height:1.6;">
+      Q1 established the foundation: structure, ownership, and early signals. Q2 should focus on making this foundation more visible through stronger tracking, better distribution, and simpler management reporting.
+    </p>
+    <div class="cta-group justify-center mt-xl">
+      <a href="#evidence" class="btn btn-white text-brand fw-bold shadow-soft">Review proof of work</a>
+      <a href="#vault" class="btn btn-outline-white">Open resource vault</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer text-center" style="padding: 3rem 1.5rem; background: var(--bg-dark); border-top: 1px solid var(--border-color);">
+  <p class="text-white-muted" style="font-size:0.95rem; font-weight:600; letter-spacing:0.04em;">INTERNAL MANAGEMENT REVIEW • CYTRON TUTORIAL OWNERSHIP</p>
+</footer>
+
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="Expanded View">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
