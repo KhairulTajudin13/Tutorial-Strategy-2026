@@ -566,4 +566,180 @@ details.accordion .acc-content .proof-actions {
     transform: translateY(-2px);
 }
 
+/* ===================================================
+   Q1 OBJECTIVES GRID
+   =================================================== */
+.q1-objectives-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .q1-objectives-grid { grid-template-columns: 1fr; }
+}
+.obj-card {
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+.obj-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 92, 230, 0.07);
+  border-color: rgba(0, 92, 230, 0.15);
+}
+.obj-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.obj-weight {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.obj-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+.obj-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+.obj-summary {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+.obj-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.obj-results li {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.obj-results li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+.obj-evidence {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+.obj-evidence-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+}
+.obj-evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+}
 
+/* ===================================================
+   Q2 MONTH ROADMAP BULLET LIST
+   =================================================== */
+.q2-month-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.q2-month-list li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.4;
+}
+.q2-month-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .roadmap-band > div { flex-direction: column !important; gap: 1.5rem; }
+  .border-right-light { border-right: none; border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; }
+}
+
+/* ===================================================
+   SECTION EYEBROW LABEL
+   =================================================== */
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+  margin-bottom: 0.85rem;
+}
+
+/* ===================================================
+   CHECK LIST (Q2 outcome / alignment cards)
+   =================================================== */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.check-list li {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  padding-left: 1.6rem;
+  position: relative;
+  line-height: 1.4;
+}
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
